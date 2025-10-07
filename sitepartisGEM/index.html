@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="el"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pratis - Εισαγωγές Ειδών Υγιεινής & Πλακιδίων | Πάτρα</title>
+
+    <meta name="description" content="Η Pratis στην Πάτρα ειδικεύεται στην εισαγωγή πολυτελών πλακιδίων και ειδών υγιεινής κορυφαίας ποιότητας. Ανακαλύψτε τις συλλογές μας.">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="#home" class="logo-link">
+            <img src="pratis-logo.png" alt="Pratis Company Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#brands">Our Brands</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="banner">
+                <h1>Elevating Your Space with Premium Imports</h1>
+                <p>Discover our exclusive collections of luxury tiles and hygiene products.</p>
+                <button onclick="window.location.href='#contact'">Contact Us Now!</button>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Pratis</h2>
+            <p>Here you can write about your company's history, mission, and commitment to quality.</p>
+        </section>
+
+        <section id="brands">
+            <h2>Our Featured Brands</h2>
+            <input type="text" id="search-bar" onkeyup="searchProducts()" placeholder="Search for brands...">
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="brand-logo-1.jpg" alt="Logo of Brand 1">
+                    <h3>Brand Name 1</h3>
+                    <p>Short description of the brand and its products (e.g., Italian luxury tiles).</p>
+                </div>
+                <div class="product-card">
+                    <img src="brand-logo-2.jpg" alt="Logo of Brand 2">
+                    <h3>Brand Name 2</h3>
+                    <p>Short description of the brand (e.g., Modern bathroom fixtures).</p>
+                </div>
+                <div class="product-card">
+                    <img src="brand-logo-3.jpg" alt="Logo of Brand 3">
+                    <h3>Another Brand</h3>
+                    <p>A third brand for demonstrating the search functionality.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator">
+            <h2>Project Calculator</h2>
+            <p>Estimate the number of tile boxes you'll need for your project.</p>
+            <div class="calculator-form">
+                <label for="room-width">Room Width (meters):</label>
+                <input type="number" id="room-width" placeholder="e.g., 3.5">
+                <label for="room-length">Room Length (meters):</label>
+                <input type="number" id="room-length" placeholder="e.g., 4">
+                <label for="sqm-per-box">Square Meters per Box:</label>
+                <input type="number" id="sqm-per-box" placeholder="e.g., 1.44">
+                <button onclick="calculateTiles()">Calculate</button>
+            </div>
+            <div id="calculator-result" class="result-container">
+                </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Visit our showroom in nikaia or get in touch with our team.</p>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pratis | Εμπόριο Ειδών Υγιεινής. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
