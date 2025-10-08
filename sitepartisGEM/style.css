@@ -76,6 +76,21 @@ header nav ul li a {
 header nav ul li a:hover {
     color: var(--accent-gold);
 }
+/* Aligns text and logo side-by-side */
+.logo-container {  
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* PRATIS OE styling */
+.company-name{
+    color :var(--text-light);
+    font-size: 1.6em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+}
 
 /* --- Banner Section --- */
 .banner {
