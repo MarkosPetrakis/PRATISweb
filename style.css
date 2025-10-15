@@ -159,10 +159,10 @@ header nav ul li a:hover {
 }
 
 .product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    width: 250px;        /* Sets a consistent width for all logos */
+    height: 120px;       /* Sets a consistent height for all logos */
+    object-fit: contain; /* Scales the image to fit without stretching */
+    margin-bottom: 15px; /* Adds space between the logo and the text below */
 }
 
 .hidden {
