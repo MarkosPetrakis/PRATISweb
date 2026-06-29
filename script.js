@@ -1,51 +1,44 @@
-// Wait for the HTML document to be fully loaded before running the script
-document.addEventListener('DOMContentLoaded', (event) => {
+// --- Interactive Search (Searches titles and descriptions) ---
+function searchProducts() {
+    const query = document.getElementById('search-bar').value.toLowerCase();
+    const brands = document.querySelectorAll('.brand-card');
 
-    // --- Interactive Search Function for Brands ---
-    window.searchProducts = function() {
-        // Get the search query and convert to lower case
-        const query = document.getElementById('search-bar').value.toLowerCase();
-        
-        // Get all the brand cards
-        const brands = document.querySelectorAll('.product-card');
-
-        brands.forEach(brand => {
-            const name = brand.querySelector('h3').textContent.toLowerCase();
-            // If the brand name includes the query, make sure it's visible
-            if (name.includes(query)) {
-                brand.classList.remove('hidden');
-            } else {
-                // Otherwise, hide it by adding the 'hidden' class
-                brand.classList.add('hidden');
-            }
-        });
-    }
-
-    // --- Project Tile Calculator ---
-    window.calculateTiles = function() {
-        const width = parseFloat(document.getElementById('room-width').value);
-        const length = parseFloat(document.getElementById('room-length').value);
-        const sqmPerBox = parseFloat(document.getElementById('sqm-per-box').value);
-        const resultArea = document.getElementById('calculator-result');
-
-        // Simple validation to ensure inputs are numbers > 0
-        if (isNaN(width) || isNaN(length) || isNaN(sqmPerBox) || width <= 0 || length <= 0 || sqmPerBox <= 0) {
-            resultArea.innerHTML = `<p style="color: red;">Please enter valid, positive numbers for all fields.</p>`;
-            return;
+    brands.forEach(brand => {
+        // Search both the title (h3) and the description (p)
+        const textContent = brand.textContent.toLowerCase();
+        if (textContent.includes(query)) {
+            brand.style.display = 'block';
+        } else {
+            brand.style.display = 'none';
         }
+    });
+}
 
-        const totalSqm = width * length;
-        // Add 10% for waste (cuts, breaks, etc.) - a standard practice
-        const totalSqmWithWaste = totalSqm * 1.10;
-        // Use Math.ceil() to round up, as you can't buy a fraction of a box
-        const boxesNeeded = Math.ceil(totalSqmWithWaste / sqmPerBox);
+// --- Enhanced Project Estimator ---
+function calculateTiles() {
+    const width = parseFloat(document.getElementById('room-width').value);
+    const length = parseFloat(document.getElementById('room-length').value);
+    const sqmPerBox = parseFloat(document.getElementById('sqm-per-box').value);
+    const resultArea = document.getElementById('calculator-result');
 
-        // Display the result on the page instead of an alert
-        resultArea.innerHTML = `
-            <h3>Calculation Complete</h3>
-            <p>Total Area: <strong>${totalSqm.toFixed(2)} m²</strong></p>
-            <p>Recommended Area (including 10% for waste): <strong>${totalSqmWithWaste.toFixed(2)} m²</strong></p>
-            <p>You will need approximately <strong>${boxesNeeded} boxes</strong> of tiles.</p>
-        `;
+    if (isNaN(width) || isNaN(length) || isNaN(sqmPerBox) || width <= 0 || length <= 0 || sqmPerBox <= 0) {
+        resultArea.style.display = 'block';
+        resultArea.style.borderLeftColor = 'red';
+        resultArea.innerHTML = `<p style="color: red;">Please enter valid, positive numbers.</p>`;
+        return;
     }
-});
+
+    const totalSqm = width * length;
+    const totalSqmWithWaste = totalSqm * 1.10;
+    const boxesNeeded = Math.ceil(totalSqmWithWaste / sqmPerBox);
+
+    resultArea.style.display = 'block';
+    resultArea.style.borderLeftColor = 'var(--color-gold)';
+    resultArea.innerHTML = `
+        <h3 style="font-family: var(--font-heading); color: var(--color-gold); margin-bottom: 10px;">Estimation Complete</h3>
+        <p>Net Area: <strong>${totalSqm.toFixed(2)} m²</strong></p>
+        <p>Area with 10% Waste Buffer: <strong>${totalSqmWithWaste.toFixed(2)} m²</strong></p>
+        <p style="font-size: 1.2rem; margin: 15px 0;">Total Requirement: <strong>${boxesNeeded} Boxes</strong></p>
+        <button class="btn-trade" onclick="window.location.href='#contact'" style="margin-top: 15px;">Request Quote for ${boxesNeeded} Boxes</button>
+    `;
+}
