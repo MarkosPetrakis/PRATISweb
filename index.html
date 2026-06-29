@@ -1,192 +1,165 @@
 <!DOCTYPE html>
-<html lang="el"> <head>
+<html lang="el">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Pratis - Εισαγωγές Ειδών Υγιεινής & Πλακιδίων | Νίκαια </title>
-
-    <meta name="description" content="Η Pratis στην Νίκαια ειδικεύεται στην εισαγωγή πολυτελών πλακιδίων και ειδών υγιεινής κορυφαίας ποιότητας. Ανακαλύψτε τις συλλογές μας.">
-
-    <link rel="icon" type="image/png" href="favicon.png">
-
+    <title>Pratis | Luxury European Surfaces & Hygiene</title>
+    <meta name="description" content="Pratis OE specializes in importing the finest luxury tiles and hygiene products from Italy and Spain to Nikaia.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-    <div class="logo-container">  
-        <a href="#home" class="logo-link">
-            <img src="pratis-logo.png" alt="Pratis Company Logo">
+        <a href="#home" class="logo-container">
+            <span class="company-name">PRATIS OE</span>
         </a>
-        <span class="company-name">PRATIS OE</span>
-    </div>    
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#brands">Our Brands</a></li>
+                <li><a href="#about">The Heritage</a></li>
+                <li><a href="#brands">Collections</a></li>
+                <li><a href="#calculator">Calculator</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home">
-            <div class="banner">
-                <h1>Elevating Your Space with Premium Imports</h1>
-                <p>Discover our exclusive collections of luxury tiles and hygiene products.</p>
-                <button onclick="window.location.href='#contact'">Contact Us Now!</button>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>The Art of European Surface</h1>
+                <p>Direct importers of the finest porcelain, ceramic, and natural stone from Italy and Spain to Greece.</p>
+                <a href="#brands" class="btn-primary">Explore Collections</a>
             </div>
         </section>
 
         <section id="about">
-            <h2>About Pratis</h2>
-            <p>At Pratis OE, we're more than just a business; we're a family. Founded on the principles of integrity, dedication, and genuine care, our company was built from the ground up with a single, clear mission: to treat every customer like a part of our family.
-
-As a family-run business, our name and reputation are at the heart of everything we do. We believe that exceptional service and fair pricing aren't just business strategies—they are the cornerstones of a lasting relationship. In a market often dominated by large, impersonal corporations, we stand out by offering a personal touch. When you contact us, you're speaking with someone who is personally invested in your success and satisfaction.</p>
+            <div class="about-grid">
+                <img src="Castelvetro.jpg" alt="Luxury Tile Showroom" class="about-image">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">A Legacy of Quality</h2>
+                    <p>At Pratis OE, we are more than just a business; we are a family. Founded on the principles of integrity, dedication, and genuine care, our company was built from the ground up with a single, clear mission: to treat every customer like a part of our family.</p>
+                    <p>As a family-run business, our name and reputation are at the heart of everything we do. We believe that exceptional service and fair pricing are not just business strategies—they are the cornerstones of a lasting relationship.</p>
+                    <p>In a market often dominated by large, impersonal corporations, we stand out by offering a personal touch. We source directly from the most prestigious quarries and kilns in Europe, bringing world-class design directly to your doorstep in Nikaia.</p>
+                </div>
+            </div>
         </section>
 
         <section id="brands">
-            <h2>Our Featured Brands</h2>
-            <input type="text" id="search-bar" onkeyup="searchProducts()" placeholder="Search for brands...">
-            <div class="product-list">
-                <div class="product-card">
-                    <img src="brand-logo-1.png" alt="Logo of Brand 1">
-                    <h3>ROSAGRES</h3>
-                    <p>ROSAGRES is known for its high-quality porcelain stoneware products for swimming 
-                        pools, outdoor/industrial pavements, and high-traffic areas. The company is a leader
-                         in the swimming pool sector, particularly public pools, and is recognized for its innovative
-                          and durable solutions, including specialized overflow systems.</p>
-                </div>
-                <div class="product-card">
-                    <img src="brand-logo-2.png" alt="Logo of Brand 2">
-                    <h3>SUPERGRES</h3>
-                    <p>Supergres is an Italian company known for producing high-quality,
-                         innovative porcelain stoneware tiles and white body wall tiles for residential
-                          and commercial spaces, recognized for their realistic Italian design, sophisticated 
-                          finishes, and versatile aesthetic appeal in styles ranging from classic to modern.</p>
-                </div>
-                <div class="product-card">
-                    <img src="brand-logo-3.jpg" alt="Logo of Brand 3">
-                    <h3>Quintessenza Ceramiche</h3>
-                    <p>Quintessenza Ceramiche is known for its innovative and high-quality small-format ceramic
-                         tiles, combining traditional craftsmanship with modern technology, and focusing on unique 
-                         design, sophisticated color palettes, and textures.</p>
-                </div>
-                 <div class="product-card">
-                    <img src="brand-logo-4.png" alt="Logo of Brand 4">
-                    <h3>Sil Ceramiche</h3>
-                    <p></p>
-                </div>
-                 <div class="product-card">
-                    <img src="brand-logo-5.png" alt="Logo of Brand 5">
-                    <h3>KEOPE Ceramiche</h3>
-                    <p></p>
-                </div>
-                 <div class="product-card">
-                    <img src="brand-logo-6.png" alt="Logo of Brand 6">
-                    <h3>ceramiche CASTELVETRO</h3>
-                    <p></p>
-                </div>
-                 <div class="product-card">
-                    <img src="brand-logo-7.png" alt="Logo of Brand 7">
-                    <h3>Novoceram</h3>
-                    <p></p>
-                </div>
-                 <div class="product-card">
-                    <img src="brand-logo-8.png" alt="Logo of Brand 8">
-                    <h3>Apavisa</h3>
-                    <p></p>
-                </div>
-                 <div class="product-card">
-                    <img src="brand-logo-9.png" alt="Logo of Brand 9">
-                    <h3>Dune</h3>
-                    <p></p>
-                </div>
-                 <div class="product-card">
-                    <img src="brand-logo-10.png" alt="Logo of Brand 10">
-                    <h3>Tavar</h3>
-                    <p></p>
-                </div>
-                 <div class="product-card">
-                    <img src="brand-logo-11.png" alt="Logo of Brand 11">
-                    <h3>Terraklinker</h3>
-                    <p></p>
-                </div>
-                 <div class="product-card">
-                    <img src="brand-logo-12.png" alt="Logo of Brand 12">
-                    <h3>Cerpa</h3>
-                    <p></p>
-                </div>
-                 <div class="product-card">
-                    <img src="brand-logo-13.png" alt="Logo of Brand 13">
-                    <h3>Newker</h3>
-                    <p></p>
-                </div>
-                 <div class="product-card">
-                    <img src="brand-logo-14.png" alt="Logo of Brand 14">
-                    <h3>Effepi</h3>
-                    <p></p>
-                </div>
+            <h2 class="section-title">Our Featured Brands</h2>
+            <div class="search-container">
+                <input type="text" id="search-bar" onkeyup="searchProducts()" placeholder="Search by brand, style, or origin (e.g., 'Italian', 'Porcelain')...">
+            </div>
 
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <img src="brand-logo-1.png" alt="ROSAGRES Logo" class="brand-logo">
+                    <h3>ROSAGRES</h3>
+                    <p>Spanish leaders in high-quality porcelain stoneware products, specializing in swimming pools, outdoor pavements, and high-traffic areas with innovative overflow systems.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="brand-logo-2.png" alt="SUPERGRES Logo" class="brand-logo">
+                    <h3>SUPERGRES</h3>
+                    <p>Italian masters of realistic porcelain stoneware and white body wall tiles. Perfect for residential spaces seeking sophisticated finishes and versatile aesthetics.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="brand-logo-3.jpg" alt="Quintessenza Logo" class="brand-logo">
+                    <h3>Quintessenza</h3>
+                    <p>Combining traditional craftsmanship with modern technology, producing innovative small-format ceramic tiles with sophisticated color palettes and textures.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="brand-logo-4.png" alt="Sil Ceramiche Logo" class="brand-logo">
+                    <h3>Sil Ceramiche</h3>
+                    <p>Avant-garde Italian design focused on large-format slabs and architectural surfaces that push the boundaries of modern interior styling.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="brand-logo-5.png" alt="KEOPE Ceramiche Logo" class="brand-logo">
+                    <h3>KEOPE Ceramiche</h3>
+                    <p>A benchmark in the Italian ceramic industry, Keope delivers exceptionally durable, full-body porcelain stoneware for both indoor and outdoor commercial projects.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="brand-logo-6.png" alt="Castelvetro Logo" class="brand-logo">
+                    <h3>Castelvetro</h3>
+                    <p>Specialists in wood-look and stone-look porcelain. Castelvetro combines the warmth of natural materials with the zero-maintenance benefits of Italian ceramic.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="brand-logo-7.png" alt="Novoceram Logo" class="brand-logo">
+                    <h3>Novoceram</h3>
+                    <p>French elegance meets technical precision. Novoceram has been producing refined, sustainable ceramic collections for high-end residential projects since 1863.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="brand-logo-8.png" alt="Apavisa Logo" class="brand-logo">
+                    <h3>Apavisa</h3>
+                    <p>High-tech Spanish porcelain designed for contemporary architecture. Known for oxidized metal looks, concrete aesthetics, and hyper-realistic stone finishes.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="brand-logo-9.png" alt="Dune Logo" class="brand-logo">
+                    <h3>Dune</h3>
+                    <p>The ultimate choice for decorative tiles and mosaics. Dune offers bold, fashion-forward Spanish ceramics that act as the centerpiece of any bathroom or kitchen.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="brand-logo-10.png" alt="Tavar Logo" class="brand-logo">
+                    <h3>Tavar</h3>
+                    <p>Premium wooden flooring artisans. Tavar brings the authentic, timeless luxury of European hardwood parquet to elevate any architectural space.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="brand-logo-11.png" alt="Terraklinker Logo" class="brand-logo">
+                    <h3>Terraklinker</h3>
+                    <p>Extruded natural klinker tiles from Spain. Renowned for their extreme resistance to frost and temperature changes, making them the superior choice for outdoor terraces.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="brand-logo-13.png" alt="Newker Logo" class="brand-logo">
+                    <h3>Newker</h3>
+                    <p>A dynamic Spanish brand offering trendy, versatile ceramic and porcelain wall and floor tiles tailored for modern lifestyle interiors.</p>
+                </div>
             </div>
         </section>
 
         <section id="calculator">
-            <h2>Project Calculator</h2>
-            <p>Estimate the number of tile boxes you'll need for your project.</p>
-            <div class="calculator-form">
-                <label for="room-width">Room Width (meters):</label>
-                <input type="number" id="room-width" placeholder="e.g., 3.5">
-                <label for="room-length">Room Length (meters):</label>
-                <input type="number" id="room-length" placeholder="e.g., 4">
-                <label for="sqm-per-box">Square Meters per Box:</label>
-                <input type="number" id="sqm-per-box" placeholder="e.g., 1.44">
-                <button onclick="calculateTiles()">Calculate</button>
-            </div>
-            <div id="calculator-result" class="result-container">
+            <div class="calc-wrapper">
+                <h2 class="section-title" style="margin-bottom: 20px;">Project Estimator</h2>
+                <p style="color: var(--color-grey); margin-bottom: 40px;">Calculate your required material, automatically accounting for a 10% waste buffer.</p>
+                
+                <div class="calc-form">
+                    <input type="number" id="room-width" placeholder="Room Width (meters)">
+                    <input type="number" id="room-length" placeholder="Room Length (meters)">
+                    <input type="number" id="sqm-per-box" placeholder="Square Meters per Box (e.g. 1.44)" class="full-width">
                 </div>
+                <button onclick="calculateTiles()" class="btn-primary" style="width: 100%;">Calculate Requirement</button>
+
+                <div id="calculator-result" class="result-container"></div>
+            </div>
         </section>
 
         <section id="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-container">
-            <div class="contact-details">
-                <h3>Our Information</h3>
-                <dl>
-                    <dt>Επωνυμία:</dt>
-                    <dd>ΚΙΡΚΙΝΕΖΗΣ X ΝΙΚΟΛΟΠΟΥΛΟΣ B ΟΕ</dd>
-
-                    <dt>Διεύθυνση:</dt>
-                    <dd>Πανόρμου 4, ΝΙΚΑΙΑ, 18450, ΑΤΤΙΚΗΣ</dd>
-
-                    <dt>Τηλέφωνο:</dt>
-                    <dd>210-4257058</dd>
-
-                    <dt>Κινητό:</dt>
-                    <dd>694-4477961</dd>
-
-                    <dt>Fax:</dt>
-                    <dd>210-4250652</dd>
-                </dl>
-            </div>
-            <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.5419674319514!2d23.635945175767553!3d37.9644795012098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bba3631e9bad%3A0x1bf6c1f96edb48bc!2sPanormou%204%2C%20Nikea%20184%2050!5e0!3m2!1sen!2sgr!4v1759931133677!5m2!1sen!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <h2 class="section-title">Visit the Showroom</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p>Experience our collections in person. Our design consultants are available for both homeowners and trade professionals.</p>
+                    <dl>
+                        <dt>Company:</dt>
+                        <dd>ΚΙΡΚΙΝΕΖΗΣ X ΝΙΚΟΛΟΠΟΥΛΟΣ B ΟΕ</dd>
+                        <dt>Address:</dt>
+                        <dd>Πανόρμου 4, ΝΙΚΑΙΑ, 18450, ΑΤΤΙΚΗΣ</dd>
+                        <dt>Phone:</dt>
+                        <dd>210-4257058</dd>
+                        <dt>Mobile:</dt>
+                        <dd>694-4477961</dd>
+                        <dt>Email:</dt>
+                        <dd>prattis.co@gmail.com</dd>
+                    </dl>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.485608820121!2d23.6441584!3d37.9657038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bc1b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sPanormou%204%2C%20Nikaia%20184%2050%2C%20Greece!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Pratis | Εμπόριο Ειδών Υγιεινής. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-        </div>
+        <p>© 2026 Pratis OE | Luxury European Surfaces & Hygiene. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
