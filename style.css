@@ -211,7 +211,7 @@ section {
 
 .brand-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 15px 30px var(--color-gold);
 }
 
 .brand-card h3 {
@@ -240,6 +240,9 @@ section {
 
 .brand-card:hover .brand-logo {
     opacity: 1; /* Brightens the logo when the user hovers over the card */
+}
+.brand-card {
+  cursor: pointer;
 }
 /* --- Calculator Section --- */
 .calc-wrapper {
